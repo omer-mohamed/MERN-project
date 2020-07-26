@@ -8,7 +8,7 @@ const CharacterItem = ({ item }) => {
         <div className='card-front'>
           <ul>
             <li>
-              <strong></strong> {data.charityName}
+              <h2>{data.charityName}</h2>
             </li>
           </ul>
         </div>

@@ -3,6 +3,7 @@ import axios from 'axios'
 import Header from './components/ui/Header'
 import CharacterGrid from './components/characters/CharacterGrid'
 import Search from './components/ui/Search'
+import ParticleComponent from "./components/ui/ParticleComponent";
 import './App.css'
 
 
@@ -23,12 +24,12 @@ const App = () => {
   }, [query])
   return (
     
-    <div className='container'>
-    <Header />
-    <Search getQuery={(q) => setQuery(q)} />
-    <CharacterGrid isLoading={isLoading} items={items} />
-    </div>
-
+   <div className='container'>
+      <Header/>
+      <Search getQuery={(q) =>
+      setQuery(q)} />
+      <CharacterGrid isLoading={isLoading} items={items} />
+   </div>
   )
 }
 
