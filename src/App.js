@@ -3,9 +3,11 @@ import axios from 'axios'
 import Header from './components/ui/Header'
 import CharacterGrid from './components/characters/CharacterGrid'
 import Search from './components/ui/Search'
-import ParticleComponent from "./components/ui/ParticleComponent";
 import './App.css'
+require('dotenv').config();
 
+const apikey =String(process.env.REACT_APP_API_KEY);
+const apiID =String(process.env.REACT_APP_API_ID);
 
 const App = () => {
   const [items, setItems] = useState([])
@@ -15,7 +17,7 @@ const App = () => {
   useEffect(() => {
     const fetchItems = async () => {
       const result = await axios(
-        `https://api.data.charitynavigator.org/v2/Organizations?app_id=47e1deff&app_key=5a6f5c1534c434aee6333638279f3c59&pageSize=156&search=${query}`
+        `https://api.data.charitynavigator.org/v2/Organizations?app_id=${apiID}&app_key=${apikey}&pageSize=156&search=${query}`
       )
       setItems(result.data);
       setIsLoading(false);
