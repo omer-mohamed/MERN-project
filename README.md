@@ -1,3 +1,8 @@
+Visualze and showcase charities in the US with React
+
+Link to the deployed website :https://hidden-wave-41150.herokuapp.com/
+
+
 # Usage
 
 ```
